@@ -33,7 +33,7 @@ int countPairs1(int *arr, int len, int value) {
   int counter = 0;
   for (int i = 0; i < len; i++) {
     for (int j = i + 1; j < len; j++) {
-      if (arr[i] + arr[j] == value) {
+      if ((arr[i] + arr[j]) == value) {
         counter++;
       }
     }
@@ -59,6 +59,7 @@ int countPairs2(int *arr, int len, int value) {
         counter++;
       }
     }
+
   return counter;
 }
 
@@ -70,7 +71,7 @@ int countPairs3(int *arr, int len, int value) {
     if (arr[i] == checker) {
       counter--;
     }
-    arr[i] = -1;
+    arr[i] = 2147483647;
   }
 
   return counter;
