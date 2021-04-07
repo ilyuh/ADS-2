@@ -1,22 +1,5 @@
 // Copyright 2021 NNTU-CS
 
-// функция сортировки массива
-int * sort(int *arr, int len) {
-  int replaces = 1;
-  while (replaces != 0) {
-    replaces = 0;
-    for (int i = 0; i < len; i++) {
-      if (i != len-1 && arr[i] > arr[i+1]) {
-        int x = arr[i];
-        arr[i] = arr[i+1];
-        arr[i+1] = x;
-        replaces++;
-      }
-    }
-  }
-  return arr;
-}
-
 // функция бинарного поиска
 int cbinsearch(int *arr, int size, int value) {
   int left = 0;
@@ -47,8 +30,6 @@ int cbinsearch(int *arr, int size, int value) {
 }
 
 int countPairs1(int *arr, int len, int value) {
-  arr = sort(arr, len);
-
   int counter = 0;
   for (int i = 0; i < len; i++) {
     for (int j = i + 1; j < len; j++) {
@@ -62,8 +43,6 @@ int countPairs1(int *arr, int len, int value) {
 }
 
 int countPairs2(int *arr, int len, int value) {
-  arr = sort(arr, len);
-
   int counter = 0;
   for (int i = 0; i < len; i++) {
     int checker = value - arr[i];
@@ -78,8 +57,6 @@ int countPairs2(int *arr, int len, int value) {
 }
 
 int countPairs3(int *arr, int len, int value) {
-  arr = sort(arr, len);
-
   int counter = 0;
   for (int i = 0; i < len; i++) {
     int checker = value - arr[i];
