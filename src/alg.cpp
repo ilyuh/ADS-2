@@ -3,7 +3,7 @@
 // функция сортировки массива
 int * sort(int *arr, int len) {
   int replaces = 1;
-  while(replaces != 0) {
+  while (replaces != 0) {
     replaces = 0;
     for (int i = 0; i < len; i++) {
       if (i != len-1 && arr[i] > arr[i+1]) {
@@ -63,7 +63,7 @@ int countPairs1(int *arr, int len, int value) {
 
 int countPairs2(int *arr, int len, int value) {
   arr = sort(arr, len);
-  
+
   int counter = 0;
   for (int i = 0; i < len; i++) {
     int checker = value - arr[i];
@@ -79,7 +79,7 @@ int countPairs2(int *arr, int len, int value) {
 
 int countPairs3(int *arr, int len, int value) {
   arr = sort(arr, len);
-  
+
   int counter = 0;
   for (int i = 0; i < len; i++) {
     int checker = value - arr[i];
